@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define SYMBOL  1
@@ -15,39 +14,15 @@
 #define SYS     3
 
 / {
-    behaviors {
-        lt_eisuu: lt_eisuu {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_EISUU";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            flavor = "balanced";
-        };
-
-        lt_kana: lt_kana {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_KANA";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            flavor = "balanced";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q     &kp W     &kp E            &kp R        &kp T                          &kp Y      &kp U             &kp I      &kp O       &kp P          &kp BACKSPACE
-&kp TAB    &kp A     &kp S     &kp D            &kp F        &kp G                          &kp H      &kp J             &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C            &kp V        &kp B                          &kp N      &kp M             &kp COMMA  &kp PERIOD  &kp UP         &kp SLASH
-&kp LCTRL  &kp LALT  &kp LGUI  &lt 3 LC(S)      &lt 2 LANG2  &kp SPACE  &kp LBKT  &kp RBKT  &kp SPACE  &lt SYMBOL LANG1  &kp ENTER  &kp LEFT    &kp DOWN       &kp RIGHT
+&kp TAB    &kp Q     &kp W     &kp E     &kp R  &kp T                    &kp Y      &kp U    &kp I      &kp O       &kp P          &kp BACKSPACE
+&kp LCTRL  &kp A     &kp S     &kp D     &kp F  &kp G                    &kp H      &kp J    &kp K      &kp L       &kp SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V  &kp B                    &kp N      &kp M    &kp COMMA  &kp PERIOD  &kp UP         &kp SLASH
+&kp ESC    &kp CAPS  &kp LALT  &kp LGUI  &mo 3  &kp SPACE  &mo 2  &mo 1  &kp ENTER  &kp DEL  &kp RALT   &kp LEFT    &kp DOWN       &kp RIGHT
             >;
 
             label = "DEFAULT";
@@ -55,10 +30,10 @@
 
         symbol_layer {
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans
-&trans  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR                   &kp F4  &kp F5  &kp F6  &kp F11  &trans  &trans
-&trans  &trans     &trans    &trans     &trans    &trans                     &kp F7  &kp F8  &kp F9  &kp F12  &trans  &trans
-&trans  &trans     &trans    &trans     &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans
+&kp GRAVE  &kp EXCL  &kp AT          &kp HASH         &kp DLLR   &kp PRCNT                  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans     &kp PIPE  &kp LBKT        &kp RBKT         &kp MINUS  &kp EQUAL                  &trans     &trans    &trans     &trans    &trans    &trans
+&kp TILDE  &kp BSLH  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp UNDER  &kp PLUS                   &trans     &trans    &trans     &trans    &trans    &trans
+&trans     &trans    &trans          &trans           &trans     &trans     &trans  &trans  &trans     &trans    &trans     &trans    &trans    &trans
             >;
 
             label = "SYMBOL";
@@ -66,10 +41,10 @@
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp N1  &kp N2  &kp N3  &kp UNDER  &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp EQUAL  &kp DQT
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans     &kp SQT
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &trans  &trans     &trans     &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                  &kp N6    &kp N7         &kp N8       &kp N9     &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &kp CAPS
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &kp INS
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans       &trans     &trans  &trans
             >;
 
             label = "NUMBER";
@@ -77,21 +52,13 @@
 
         sys_layer {
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &kp CAPSLOCK  &kp KP_NUMLOCK  &kp SCROLLLOCK  &trans  &studio_unlock  &out OUT_TOG
-&trans       &trans        &trans        &trans        &trans        &trans                        &none         &none           &none           &none   &none           &none
-&trans       &trans        &trans        &trans        &trans        &trans                        &none         &none           &none           &none   &none           &trans
-&bootloader  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans        &trans          &trans          &trans  &trans          &bootloader
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                      &kp F7        &kp F8        &kp F9        &kp F10       &kp F11     &kp F12
+&none   &none   &none   &none   &none   &none                       &none         &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE    &none       &none
+&none   &none   &none   &none   &none   &none                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &kp PRINTSCREEN
+&none   &none   &none   &none   &none   &none   &bootloader  &none  &none         &none         &none         &none         &none       &none
             >;
 
             label = "SYS";
         };
-
-        extra1 { status = "reserved"; };
-
-        extra2 { status = "reserved"; };
-
-        extra3 { status = "reserved"; };
-
-        extra4 { status = "reserved"; };
     };
 };
