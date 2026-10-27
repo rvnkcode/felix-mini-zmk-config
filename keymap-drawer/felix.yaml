@@ -1,52 +1,101 @@
 layout: {zmk_keyboard: felix}
 layers:
-  DEFAULT: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LCTRL, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., UP, /, ESC, CAPS, LALT, SYS,
-    LGUI, SPACE, NUMBER, SYMBOL, ENTER, RALT, LGUI, LEFT, DOWN, RIGHT]
+  DEFAULT:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BACKSPACE
+  - TAB
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - "'"
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ","
+  - .
+  - UP
+  - /
+  - LEFT CONTROL
+  - LEFT ALT
+  - LEFT GUI
+  - FN
+  - {t: "英数", h: NUMBER}
+  - SPACE
+  - "["
+  - "]"
+  - SPACE
+  - {t: "かな", h: SYMBOL}
+  - ENTER
+  - LEFT
+  - DOWN
+  - RIGHT
   SYMBOL:
-  - '`'
-  - '!'
-  - '@'
-  - '#'
+  - ESC
+  - "!"
+  - "@"
+  - "#"
   - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - DEL
-  - {t: ▽, type: trans}
-  - '|'
-  - '['
-  - ']'
-  - '-'
-  - '='
+  - "%"
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '~'
-  - \
-  - '{'
-  - '}'
-  - _
-  - +
+  - TAB
+  - "^"
+  - "&"
+  - "*"
+  - "("
+  - ")"
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - LEFT CONTROL
+  - LEFT ALT
+  - LEFT GUI
+  - FN
+  - {t: "英数", h: NUMBER}
+  - SPACE
+  - "["
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -55,16 +104,41 @@ layers:
   - {t: ▽, type: trans}
   NUMBER:
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - "1"
+  - "2"
+  - "3"
+  - _
+  - +
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - "4"
+  - "5"
+  - "6"
+  - "-"
+  - "="
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - "7"
+  - "8"
+  - "9"
+  - "*"
+  - UP
+  - "'"
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -72,93 +146,61 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - "]"
+  - SPACE
+  - "0"
+  - ENTER
   - LEFT
   - DOWN
-  - UP
   - RIGHT
-  - {t: ▽, type: trans}
-  - CAPS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - PAGE DOWN
-  - PAGE UP
-  - END
-  - {t: ▽, type: trans}
-  - INS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   SYS:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - VOL DN
-  - VOL UP
-  - MUTE
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
   - BT CLR
-  - PRINTSCREEN
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - '&bootloader'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-combos:
-- p: [17, 18]
-  k: '&caps_word'
-- p: [1, 28]
-  k: Alt+F4
-- p: [25, 28]
-  k: Ctl+`
+  - {t: BT, h: "0"}
+  - {t: BT, h: "1"}
+  - {t: BT, h: "2"}
+  - {t: BT, h: "3"}
+  - {t: BT, h: "4"}
+  - CAPSLOCK
+  - KP NUMLOCK
+  - SCROLLLOCK
+  - {t: ▽, type: trans}
+  - "&studio_unlock"
+  - OUT TOG
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - {t: ▽, type: trans}
+  - BOOT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BOOT
