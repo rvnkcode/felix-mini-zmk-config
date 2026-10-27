@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: felix}
 layers:
-  DEFAULT: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LCTRL, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., UP, /, ESC, CAPS, LALT, LGUI,
-    SYS, SPACE, NUMBER, SYMBOL, ENTER, RALT, DEL, LEFT, DOWN, RIGHT]
+  DEFAULT: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LCTRL, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., UP, /, ESC, CAPS, LALT, SYS,
+    LGUI, SPACE, NUMBER, SYMBOL, ENTER, RALT, LGUI, LEFT, DOWN, RIGHT]
   SYMBOL:
   - '`'
   - '!'
@@ -14,7 +14,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: ▽, type: trans}
+  - DEL
   - {t: ▽, type: trans}
   - '|'
   - '['
@@ -144,8 +144,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - {type: held}
+  - ''
   - ''
   - '&bootloader'
   - ''
